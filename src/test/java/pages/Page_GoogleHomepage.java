@@ -53,7 +53,7 @@ public class Page_GoogleHomepage extends Page_BasePage {
 	}
 	
 	public void checkGoogleSearchButtonIsDisplayed() {
-		if(driver.findElement(By.xpath("//div[@class='FPdoLc VlcLAe']//input[@value=\"Google'da Ara\"]")).isDisplayed()) {
+		if(driver.findElement(By.className("gNO89b")).isDisplayed()) {
 			System.out.println("Google'da Ara button is displayed");
 		} else {
 			System.out.println("Google'da Ara button is NOT displayed");
@@ -61,7 +61,7 @@ public class Page_GoogleHomepage extends Page_BasePage {
 	}
 	
 	public void checkImFeelingLuckyButtonIsDisplayed() {
-		if(driver.findElement(By.xpath("//div[@class='FPdoLc VlcLAe']//input[@value='Kendimi Şanslı Hissediyorum']")).isDisplayed()) {
+		if(driver.findElement(By.className("RNmpXc")).isDisplayed()) {
 			System.out.println("I'm Kendimi Şanslı Hissediyorum button is displayed");
 		} else {
 			System.out.println("I'm Kendimi Şanslı Hissediyorum button is NOT displayed");

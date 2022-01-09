@@ -13,7 +13,11 @@ RUN apt-get install -y p7zip \
     unace \
     zip \
     unzip \
-    bzip2
+    bzip2 \
+    fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcairo2 libcups2 libdrm2 libgbm1 libnspr4 libnss3 libxss1 xdg-utils
+
+RUN apt-get upgrade -y
+
 
 #Version numbers
 ARG FIREFOX_VERSION=78.0.2
@@ -23,8 +27,10 @@ ARG FIREFOXDRIVER_VERSION=0.29.0
 
 #Step 2: Install Chrome
 RUN curl http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_$CHROME_VERSION-1_amd64.deb -o /chrome.deb
+#RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
 RUN dpkg -i /chrome.deb
 RUN rm /chrome.deb
+
 #Step 3: Install chromedriver for Selenium
 RUN mkdir -p /app/bin
 RUN curl https://chromedriver.storage.googleapis.com/$CHROMDRIVER_VERSION/chromedriver_linux64.zip -o /tmp/chromedriver.zip \
@@ -76,3 +82,7 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 COPY . /app
 #Making our working directory as /app
 WORKDIR /app
+RUN mvn clean
+CMD ["mvn", "test"]
+
+

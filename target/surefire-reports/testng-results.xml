@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="5314" started-at="2022-01-09T00:38:00 UTC" finished-at="2022-01-09T00:38:05 UTC">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="5314" started-at="2022-01-09T00:38:00 UTC" finished-at="2022-01-09T00:38:05 UTC">
+      <class name="testng.HomePageTestCases">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.HomePageTestCases@4bbfb90a]" name="beforeMethod" is-config="true" duration-ms="3430" started-at="2022-01-09T00:38:00 UTC" finished-at="2022-01-09T00:38:03 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="searchGoogle()[pri:0, instance:testng.HomePageTestCases@4bbfb90a]" name="searchGoogle" duration-ms="1845" started-at="2022-01-09T00:38:03 UTC" finished-at="2022-01-09T00:38:05 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchGoogle -->
+      </class> <!-- testng.HomePageTestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
